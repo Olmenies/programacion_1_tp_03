@@ -26,14 +26,17 @@ namespace tp_03_ejercicio_09
         
         private void buttonTirarDados_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int[] tiradaDados = new int[CANTIDADDADOS];
 
-            int[] tiradaDados = new int[CANTIDADDADOS];
+                cantidadDadosTirados += 2;
 
-            cantidadDadosTirados += 2;
-
-            tirarDados(tiradaDados);
-            calcularResultados(tiradaDados);
-            mostrarResultados();
+                tirarDados(tiradaDados);
+                calcularResultados(tiradaDados);
+                mostrarResultados();
+            }
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
         }//fin del evento buttonTirarDados_Click()
 
         private void buttonLimpiar_Click(object sender, EventArgs e)

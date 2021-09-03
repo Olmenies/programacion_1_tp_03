@@ -20,8 +20,12 @@ namespace tp_03_ejercicio_08
         private void buttonTirarDados_Click(object sender, EventArgs e)
         {
             //evento para iniciar la tirada de dados
-            int resultadoDado = tirarDado();
-            MessageBox.Show(Convert.ToString(resultadoDado));
+            try
+            {
+                int resultadoDado = tirarDado();
+                MessageBox.Show(Convert.ToString(resultadoDado));
+            }
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
         }//fin del evento buttonTirarDados_Click()
 
         private void buttonConsigna_Click(object sender, EventArgs e)
