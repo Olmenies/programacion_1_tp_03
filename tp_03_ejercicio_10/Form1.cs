@@ -1,8 +1,4 @@
-﻿/* To do:
- * Rellenar evento consigna
- * definir los métodos de conversión
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
